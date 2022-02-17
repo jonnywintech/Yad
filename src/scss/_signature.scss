@@ -1,0 +1,127 @@
+.signature {
+    padding: 82px 58px 36px 58px;
+}
+
+.signature__headline {
+    text-align: center;
+    text-transform: uppercase;
+    color: $orangeLight;
+    margin-bottom: 10px;
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        line-height: 5px;
+        width: 50px;
+        border-bottom: 3px solid $orangeLight;
+        margin: 0 auto;
+
+    }
+}
+
+.signature__headline-black {
+     color: $black;
+}
+
+.signature__container{
+    margin-top: 52px;
+    @include flexCenter(row, wrap);
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.signature__card {
+    width: 439px;
+    height: 439px;
+    @include flexDirWrap(column, nowrap);
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}
+
+.signature__card-img{
+    width: auto;
+    height:80%;
+}
+
+.signature__card-body{
+    height: 100%;
+    @include flexCenter(row, nowrap);
+}
+
+.signature__card-text{
+    font-family: Teko;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.signature__card--special{
+    position: relative;
+    @include flexCenter(row, nowrap);
+}
+
+.signature__card-img--special{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.signature__card-body--special{
+    width: 385px;
+    height: 385px;
+    z-index: 2;
+    background-color: $black;
+    border-radius: 25px;
+    @include flexDirWrap(column, nowrap);
+    justify-content: space-between;
+    padding: 82px 0;
+}
+
+.signature__card-text--special {
+    color: $white;
+    text-align: center;
+}
+
+.signature__line {
+    width: 50px;
+    height: 3px;
+    background-color: $orangeLight;
+}
+
+.signature__text{
+    font-family: "Blinker", sans-serif;
+    font-size:  15px;
+    color: $white;
+    opacity: 0.5;
+}
+
+.signature__button {
+    width: 130px;
+    height: 30px;
+    background-color: $orangeLight;
+    border-radius: 25px;
+    color: $white;
+    text-transform: uppercase;
+    transition: $dur $ease;
+    &:hover {
+        transform: scale(1.1);
+        color: $black;
+        font-weight: $bold;
+        letter-spacing:1.5px;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}

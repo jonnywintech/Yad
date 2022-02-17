@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Restouran</title>
+    <link href="./favicon.ico" rel="icon" />
+     <!-- swiper  plugun -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="wrap">
+        <nav class="header__nav">
+          <a href="javascript:void(0)" class="header-link__logo"><img src="/images/logo.png" alt="logo" class="header-image__logo"><h3 class="header-logo__text">Young ave deli</h3></a>
+
+          <!-- menu for desktop and mobile -->
+          <div class="header__menu">
+            <ul class="header__list">
+              <li class="header__item"><a href="javascript:void(0)" class="header__link">menu</a></li>
+              <li class="header__item"><a href="javascript:void(0)" class="header__link">beer list</a></li>
+              <li class="header__item"><a href="javascript:void(0)" class="header__link">gallery</a></li>
+              <li class="header__item"><a href="javascript:void(0)" class="header__link">Events</a></li>
+              <li class="header__item"><a href="javascript:void(0)" class="header__link">contact</a></li>
+            </ul>
+            <form action="javascript:void(0)" class="header__form desktop-only">
+              <button type = "button" class="header-form__btn icon icon-magnify"></button>
+              <input type="text" class="header__input" placeholder="search website">
+            </form>
+            <div class="header__cta mobile-only">
+              <div class="header__icons">
+                <button type="button" class="header__big-icons icon icon-phone"></button>
+                <button  type="button"class="header__big-icons icon icon-map-marker"></button>
+                <button type="button" class="header__big-icons icon icon-email"></button>
+              </div>
+              <div class="header__social">
+                  <button type = "button"class="header__small-icons icon icon-facebook"></button>
+                  <button type = "button"class="header__small-icons icon icon-twitter"></button>
+                  <button type = "button"class="header__small-icons icon icon-instagram"></button>
+              </div>
+            </div>
+            
+          </div>
+           <!-- form only for mobile -->
+          <form action="javascript:void(0)" class="header-mobile__form">
+            <button type = "button" class="header-mobile__button icon icon-magnify"></button>
+            <input type="text" class="header-mobile__input" placeholder="Search website">
+          </form>
+          <button class="header-btn__menu icon icon-dots-grid desktop-only"> Yad menu</button>
+          <button class="header__hamburger icon icon-hamburger mobile-only"></button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ////// end of header ////////////////////////////////// -->
+   <main>
+
+    <!-- ///// hero section //// -->
+    <section class="hero has-cover">
+      <div class="wrap">
+        <div class="hero__container">
+          <div class="hero__top">
+          <div class="hero__text-container">
+            <span class="hero__text">Opening hours:</span>
+            <span class="hero__text hero__text--yellow">mon-sun, 11am - 3Am</span>
+          </div>
+          <div class="hero__buttons">
+            <button class="yellow__btn icon icon-facebook"></button>
+            <button class="yellow__btn icon icon-twitter"></button>
+            <button class="yellow__btn icon icon-instagram"></button>
+          </div>
+          </div>
+          <div class="hero__center">
+        <img src="/images/logo-big.png" alt="logo" class="hero__logo">
+          </div>
+          <div class="hero__bottom">
+            <div class="hero__buttons">
+              <button class="yellow__btn icon icon-phone"></button>
+              <button class="yellow__btn icon icon-map-marker"></button>
+              <button class="yellow__btn icon icon-email"></button>
+            </div>
+            <div class="hero__text-container">
+              <span class="hero__text">CALL FOR PICKUP:</span>
+              <span class="hero__text hero__text--yellow">(901) 278-0034</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /////  end of hero section //// -->
+
+    <!-- ///// start of  on menu section //// -->
+    <section class="menu">
+     
+        <nav class="menu__nav" aria-label="on menu navigation">
+        <div class="wrap">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">MUNCHES</a></li>
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">SANDWICHES</a></li>
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">DILLAS & PIZZA</a></li>
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">FROM GRILL</a></li>
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">SALADS</a></li>
+            <li class="menu__item"><a href="javascrip:void(0)" class="menu__link">DELI SIDES</a></li>
+          </ul>
+        </div>
+        </nav>
+        <div class="menu__signature">
+          <div class="wrap">
+            <div class="menu__container">
+              <img src="/images/high cotton.png" alt="high_cotton" class="menu__image-logos"><img src="/images/shark.png" alt="shark" class="menu__image-logos"><img src="/images/wisecare.png" alt="wisecare" class="menu__image-logos"><img src="/images/gear.png" alt="gear" class="menu__image-logos"><img src="/images/victory.png" alt="victory" class="menu__image-logos"><img src="/images/medlstone.png" alt="meddlesome" class="menu__image-logos">
+            </div>
+          </div>
+        </div>
+        <div class="menu__drinks">
+          <img src="/images/drafts.png" alt="dafts" class="menu__img-drinks"><img src="/images/bottles.png" alt="beers" class="menu__img-drinks"><img src="/images/cocktails.png" alt="coctails" class="menu__img-drinks"><img src="/images/wine.png" alt="wine" class="menu__img-drinks">
+        </div>
+    </section>
+
+    <!-- /// end of menu // -->
+
+    <!-- // start of signature dishes// -->
+
+    <section class="signature">
+      <div class="wrap">
+        <h2 class="signature__headline">signature <span class="signature__headline-black">dishes</span></h2>
+        <div class="signature__container">
+          <div class="signature__card">
+            <img src="/images/sweet-potato-fries.png" alt="sweet potato fires" class="signature__card-img">
+            <div class="signature__card-body">
+              <span class="signature__card-text">sweet potato fries</span>
+            </div>
+          </div>
+          <div class="signature__card">
+            <img src="images/cheese-fries.png" alt="cheese fries" class="signature__card-img">
+            <div class="signature__card-body">
+              <span class="signature__card-text">cheese fires</span>
+            </div>
+          </div>
+          <div class="signature__card">
+            <img src="/images/pizza.png" alt="pizza" class="signature__card-img">
+            <div class="signature__card-body">
+              <span class="signature__card-text">pizza</span>
+            </div>
+          </div>
+          <div class="signature__card signature__card--special">
+            <img src="/images/hand-breaded-cheese-sticks-bg.png" alt="" class="signature__card-img signature__card-img--special">
+            <div class="signature__card-body signature__card-body--special">
+              <span class="signature__card-text signature__card-text--special">hand breaded cheese<br> sticks</span>
+              <div class="signature__line"></div>
+              <span class="signature__text">Mozzarella, breading, marinara</span>
+              <button type="button" class="signature__button">Vegeterian</button>
+            </div>
+          </div>
+          <div class="signature__card">
+            <img src="/images/ruben.png" alt="reuben" class="signature__card-img">
+            <div class="signature__card-body">
+              <span class="signature__card-text">reuben</span>
+            </div>
+          </div>
+          <div class="signature__card">
+            <img src="/images/burgers.png" alt="burgers" class="signature__card-img">
+            <div class="signature__card-body">
+              <span class="signature__card-text">burgers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+   </main>
+
+
+
+    <!-- /////// foooter /////// -->
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer__container">
+          <div class="footer__left">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link icon icon-map-marker">2119 Young ave, memphis, TN</a></li>
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link icon icon-email">info@youngavenuedeli.com</a></li>
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link icon icon-phone">(901) 278-0034</a></li>
+            </ul>
+          </div>
+          <div class="footer__right">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link">Link #1</a></li>
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link">Link #2</a></li>
+              <li class="footer__item"><a href="javascrip:void(0)" class="footer__link">Link #3</a></li>
+            </ul>
+            <span class="footer__memo">made with</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

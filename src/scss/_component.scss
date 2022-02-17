@@ -1,0 +1,151 @@
+@mixin breakpoint($value) {
+  @if $value == "phone" {
+    @media only screen and (min-width: 120px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $value == "tablet" {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $value == "touch" {
+    @media only screen and (min-width: 120px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $value == "desktop" {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $value) {
+      @content;
+    }
+  }
+}
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&family=Teko:wght@400;600;700&display=swap');
+/////// fontweight //////
+
+$light: 300;
+$regular: 400;
+$medium: 600;
+$bold: 700;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 55px;
+  font-family: "Teko";
+  font-weight: $medium;
+}
+
+h2{
+  font-size: 40px;
+  font-family: "Teko";
+  font-weight: $bold;
+}
+
+h3{
+  font-size: 30px;
+  font-family: "Teko";
+  font-weight: $bold;
+}
+
+h4{
+  font-size: 15px;
+  font-family: "Blinker";
+  font-weight: $medium;
+}
+
+h5{
+  font-size: 13px;
+  font-family: "Blinker";
+  font-weight: $medium;
+}
+
+////// colors brand //////
+$white: #fff;
+$black: #000;
+$darkerOrange: #F2A60C;
+$orangeLight: #EDB408;
+$lightRed: #FA1B13;
+$darkRed: #DD0004;
+
+///// transition //////
+$dur: 0.3s;
+$halfs: 0.5s;
+$ease: ease;
+
+
+/////// container desktop //////
+
+.wrap {
+  max-width: 1688px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+  @include breakpoint(tablet) {
+    padding: 0 24px;
+  }
+  @include breakpoint(phone) {
+    padding: 0 20px;
+  }
+}
+
+//// screen reader only///
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+@mixin flexDirWrap($direction, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin flexCenter($direct, $wrapme) {
+  display: flex;
+  flex-direction: $direct;
+  flex-wrap: $wrapme;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+/////// buttons ///////
+
+button {
+  border: none;
+  background: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.has-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.yellow__btn{
+  width: 50px;
+  height: 50px;
+  background-color: $orangeLight;
+  @include flexCenter(row, nowrap);
+  border-radius: 50%;
+  color: $white;
+  display: inline-flex;
+  margin: 5px;
+  font-size: 20px;
+}

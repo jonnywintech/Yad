@@ -1,0 +1,72 @@
+.footer{
+    background-color: $black;
+    height: 100px;
+    @include breakpoint(touch){
+        height: 190px;
+    }
+}
+
+.footer__container {
+    @include flexDirWrap(row, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-family: "Blinker", sans-serif;
+    @include breakpoint(touch){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+.footer__right {
+    @include flexDirWrap(row, nowrap);
+    justify-content:flex-end;
+    align-items: center;
+    @include breakpoint(touch){
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.footer__list{
+    @include flexDirWrap(row, nowrap);
+    gap: 30px;
+    @include breakpoint(touch){
+        flex-direction: column;
+        // align-items: center;
+        justify-content:center;
+
+    }
+   
+}
+
+.footer__item>.icon {
+ &::before{
+    color: $darkerOrange;
+    margin-right: 5px;
+ } 
+}
+
+.footer__link{
+    text-decoration: none;
+    color: $white;
+    &:hover{
+        color: $darkRed;
+    }
+}
+
+.footer__memo{
+    color: $white;
+    margin-left: 30px;
+    &::after{
+        content: '\2764';
+        color: $darkRed;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}

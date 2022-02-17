@@ -1,0 +1,68 @@
+.hero{
+    background-image:url("/images/hero-image.png");
+    width: 100%;
+    height: 562px;
+    padding: 25px 0;
+    @include breakpoint(touch){
+        height: 350px;
+    }
+    @include breakpoint(phone){
+        height: 220px;
+    }
+}
+
+.hero__container {
+    @include flexDirWrap(column, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include breakpoint(touch){
+        justify-content: center;
+    }
+
+}
+
+.hero__top{
+    @include flexDirWrap(row, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include breakpoint(touch){
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.hero__logo{
+    width: 100%;
+    height: auto;
+    @include breakpoint(touch){
+        max-width: 500px;
+    }
+}
+
+.hero__text{
+    font-family: "Blinker", sans-serif;
+    font-weight: $bold;
+    letter-spacing: 4px;
+    line-height: 20px;
+    color: $white;
+    text-transform: uppercase;
+}
+
+.hero__text--yellow{
+    color: $darkerOrange;
+}
+
+.hero__bottom{
+    @include flexDirWrap(row, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include breakpoint(touch){
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
