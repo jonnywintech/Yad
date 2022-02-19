@@ -250,6 +250,7 @@
     color: $white;
     font-size: 20px;
     @include flexCenter(row, nowrap);
+    transition: $dur $ease;
 }
 
 .header__social{
