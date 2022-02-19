@@ -148,4 +148,11 @@ button {
   display: inline-flex;
   margin: 5px;
   font-size: 20px;
+  transition: $dur $ease;
+  &:hover {
+      transform: scale(1.1);
+  }
+  &:active {
+      transform: scale(0.95)
+  }
 }

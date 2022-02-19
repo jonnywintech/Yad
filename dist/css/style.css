@@ -281,7 +281,15 @@ button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 5px;
-  font-size: 20px; }
+  font-size: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .yellow__btn:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  .yellow__btn:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
 
 .header {
   font-size: 14px;
