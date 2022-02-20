@@ -8,6 +8,9 @@
     justify-content:center;
     align-items: center;
     padding: 100px 0;
+    @include breakpoint(touch){
+        padding: 75px 0;
+    }
 }
 
 .about__newsletter{
@@ -19,13 +22,23 @@
     min-height: 440px;
     width: 35%;
     border-radius: 25px;
+    @include breakpoint(touch){
+        width: 80%;
+        padding: 20px;
+    }
+    @include breakpoint(phone){
+        width: 95%;
+    }
 }
 
 .about__headline{
  font-size: 55px;
  text-transform: uppercase;
  color: $white;
- line-height: 79px;   
+ line-height: 79px;
+ @include breakpoint(phone){
+     font-size: 45px;
+ }
 }
 
 .about__newsletter-form {
@@ -33,6 +46,9 @@
     width: 100%;
     @include flexDirWrap(column, nowrap);
     gap: 10px;
+    @include breakpoint(touch){
+        gap: 20px;
+    }
     
 }
 
@@ -60,6 +76,14 @@
     background-color: $black;
     color: $white;
     border-radius: 25px;
+    transition: $dur $ease;
+    text-transform: uppercase;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(0.95)
+    }
 }
 
 .about__us {
@@ -75,6 +99,12 @@
     border-radius: 25px;
     &:hover{
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    @include breakpoint(touch){
+        visibility: hidden;
+        opacity: 0;
+        display: none;
     }
 }
 
