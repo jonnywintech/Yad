@@ -134,8 +134,8 @@ iconfont Webfont
 */
 @font-face {
   font-family: 'iconfont';
-  src: url("../fonts/iconfont.eot?1645273928222");
-  src: url("../fonts/iconfont.eot?#iefix-1645273928222") format("embedded-opentype"), url("../fonts/iconfont.woff2?1645273928222") format("woff2"), url("../fonts/iconfont.woff?1645273928222") format("woff"), url("../fonts/iconfont.ttf?1645273928222") format("truetype");
+  src: url("../fonts/iconfont.eot?1645317234311");
+  src: url("../fonts/iconfont.eot?#iefix-1645317234311") format("embedded-opentype"), url("../fonts/iconfont.woff2?1645317234311") format("woff2"), url("../fonts/iconfont.woff?1645317234311") format("woff"), url("../fonts/iconfont.ttf?1645317234311") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -190,6 +190,9 @@ Glyphs list
 
 .icon-twitter::before {
   content: '\ea0b'; }
+
+.icon-v-plane::before {
+  content: '\ea0c'; }
 
 body {
   margin: 0;
@@ -376,7 +379,7 @@ button {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      position: fixed;
+      position: absolute;
       top: 100px;
       left: 0;
       right: 0;
@@ -1296,6 +1299,200 @@ button {
   line-height: 25px;
   opacity: 0.5;
   color: #fff; }
+
+.about {
+  display: block; }
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0; }
+
+.about__newsletter {
+  padding: 50px;
+  background-color: #EDB408;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 440px;
+  width: 35%;
+  border-radius: 25px; }
+
+.about__headline {
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 79px; }
+
+.about__newsletter-form {
+  min-height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 10px; }
+
+.about__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 25px;
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.295); }
+  .about__input::-webkit-input-placeholder {
+    padding-left: 5px;
+    color: #fff; }
+  .about__input::-moz-placeholder {
+    padding-left: 5px;
+    color: #fff; }
+  .about__input:-ms-input-placeholder {
+    padding-left: 5px;
+    color: #fff; }
+  .about__input::-ms-input-placeholder {
+    padding-left: 5px;
+    color: #fff; }
+  .about__input::placeholder {
+    padding-left: 5px;
+    color: #fff; }
+  .about__input:focus {
+    outline: 2px solid #fff; }
+
+.about__newsletter-btn {
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px; }
+
+.about__us {
+  width: 35%;
+  height: 100%;
+  min-height: 440px;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 25px; }
+  .about__us:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.about__title {
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 79px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.about__title--yellow {
+  color: #F2A60C; }
+
+.about__divider {
+  width: 50px;
+  height: 3px;
+  background-color: #F2A60C;
+  margin: 5px auto 35px; }
+
+.about__paragraph {
+  width: 45ch;
+  text-align: center;
+  line-height: 20px; }
+
+.about__us-form {
+  margin-top: auto;
+  width: 100%;
+  position: relative; }
+
+.about__us-input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 25px;
+  font-size: 15px;
+  border: none;
+  color: #000;
+  background-color: rgba(97, 97, 97, 0.295); }
+  .about__us-input::-webkit-input-placeholder {
+    padding-left: 5px;
+    color: #000; }
+  .about__us-input::-moz-placeholder {
+    padding-left: 5px;
+    color: #000; }
+  .about__us-input:-ms-input-placeholder {
+    padding-left: 5px;
+    color: #000; }
+  .about__us-input::-ms-input-placeholder {
+    padding-left: 5px;
+    color: #000; }
+  .about__us-input::placeholder {
+    padding-left: 5px;
+    color: #000; }
+  .about__us-input:focus {
+    outline: 2px solid #fff; }
+
+.about__us-btn {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .about__us-btn::before {
+    content: '\ea0c';
+    font-family: 'iconfont';
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%); }
 
 .footer {
   background-color: #000;

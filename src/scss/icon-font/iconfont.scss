@@ -3,11 +3,11 @@ iconfont Webfont
 */
 @font-face {
 	font-family: 'iconfont';
-	src: url('../fonts/iconfont.eot?1645273928222');
-	src: url('../fonts/iconfont.eot?#iefix-1645273928222') format('embedded-opentype'),
-		url('../fonts/iconfont.woff2?1645273928222') format('woff2'),
-		url('../fonts/iconfont.woff?1645273928222') format('woff'),
-		url('../fonts/iconfont.ttf?1645273928222') format('truetype');
+	src: url('../fonts/iconfont.eot?1645317234311');
+	src: url('../fonts/iconfont.eot?#iefix-1645317234311') format('embedded-opentype'),
+		url('../fonts/iconfont.woff2?1645317234311') format('woff2'),
+		url('../fonts/iconfont.woff?1645317234311') format('woff'),
+		url('../fonts/iconfont.ttf?1645317234311') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -75,4 +75,8 @@ Glyphs list
 
 .icon-twitter::before {
 	content: '\ea0b';
+}
+
+.icon-v-plane::before {
+	content: '\ea0c';
 }
