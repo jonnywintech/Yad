@@ -45,7 +45,7 @@
     min-height: 200px;
     width: 100%;
     @include flexDirWrap(column, nowrap);
-    gap: 10px;
+    gap: 15px;
     @include breakpoint(touch){
         gap: 20px;
     }
@@ -73,6 +73,7 @@
 
 .about__newsletter-btn{
     height: 50px;
+    width: 100%;
     background-color: $black;
     color: $white;
     border-radius: 25px;

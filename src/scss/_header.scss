@@ -47,21 +47,24 @@
     @include breakpoint(touch){
         overflow: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 100px;
-        left: 0;
         right: 0;
-        bottom: 0;
+        width: 100%;
         z-index: 100;
         background-color: $black;
         height: calc(100vh - 100px);
         justify-content:space-between;
         transform: translateX(100%);
         transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-        padding: 50px;
+        padding: 50px 0;
         justify-content: flex-start;
 
     }
+}
+
+body{
+    overflow-x: hidden;
 }
 
 .header__menu--active{
@@ -261,6 +264,13 @@
 
 .header__small-icons {
     color: $white;
+    transition: $dur $ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(0.95)
+    }
     
 }
 

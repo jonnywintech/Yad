@@ -194,6 +194,9 @@ Glyphs list
 .icon-v-plane::before {
   content: '\ea0c'; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   margin: 0;
   padding: 0;
@@ -379,11 +382,10 @@ button {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      position: absolute;
+      position: fixed;
       top: 100px;
-      left: 0;
       right: 0;
-      bottom: 0;
+      width: 100%;
       z-index: 100;
       background-color: #000;
       height: calc(100vh - 100px);
@@ -394,10 +396,13 @@ button {
               transform: translateX(100%);
       -webkit-transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      padding: 50px;
+      padding: 50px 0;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
+
+body {
+  overflow-x: hidden; }
 
 @media only screen and (min-width: 120px) and (max-width: 1024px) {
   .header__menu--active {
@@ -680,7 +685,15 @@ button {
   gap: 25px; }
 
 .header__small-icons {
-  color: #fff; }
+  color: #fff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .header__small-icons:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  .header__small-icons:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
 
 @-webkit-keyframes spin {
   from {
@@ -1375,7 +1388,7 @@ button {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  gap: 10px; }
+  gap: 15px; }
   @media only screen and (min-width: 120px) and (max-width: 1024px) {
     .about__newsletter-form {
       gap: 20px; } }
@@ -1410,6 +1423,7 @@ button {
 
 .about__newsletter-btn {
   height: 50px;
+  width: 100%;
   background-color: #000;
   color: #fff;
   border-radius: 25px;
