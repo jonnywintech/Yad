@@ -396,7 +396,7 @@ button {
               transform: translateX(100%);
       -webkit-transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
       transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      padding: 50px 0;
+      padding: 50px;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
@@ -1304,7 +1304,7 @@ body {
   margin: 21px auto; }
 
 .events__text {
-  width: 30ch;
+  max-width: 30ch;
   text-align: center;
   margin: 0 auto;
   font-family: "Blinker", sans-serif;
