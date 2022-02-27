@@ -19,6 +19,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-stylelint": "^13.0.0",
+    "gulp-webp": "^4.0.1",
     "postcss": "^8.4.7",
     "postcss-less": "^6.0.0",
     "sass": "^1.49.9",

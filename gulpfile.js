@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const sassLint = require('gulp-sass-lint');
 const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync").create();
+const webp = require('gulp-webp');
 var runTimestamp = Math.round(Date.now() / 1000);
 
 //scss to css task
@@ -87,6 +88,7 @@ gulp.task("copy-fonts", () => {
 gulp.task("copy-assets", () => {
   return gulp
     .src("src/images/*.{png,svg,jpg,jpeg}")
+    .pipe(webp())
     .pipe(gulp.dest("dist/images"));
 });
 
