@@ -1,9 +1,9 @@
 const gulp = require("gulp");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const consolidate = require("gulp-consolidate");
 const iconfont = require("gulp-iconfont");
 const postcss = require("gulp-postcss");
-const gulpStylelint = require("gulp-stylelint");
+const sassLint = require('gulp-sass-lint');
 const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync").create();
 var runTimestamp = Math.round(Date.now() / 1000);
@@ -19,17 +19,22 @@ gulp.task("scss", () => {
 });
 
 //scss lint task
-gulp.task("scss-lint", () => {
-  return gulp.src("src/scss/*.scss").pipe(
-    gulpStylelint({
-      reporters: [
-        {
-          formatter: "string",
-          console: true,
-        },
-      ],
-    })
-  );
+gulp.task('scss-lint', function () {
+  return gulp.src('sass/**/*.s+(a|c)ss')
+    .pipe(sassLint({
+      options: {
+        formatter: 'stylish',
+        'merge-default-rules': false
+      },
+      files: {ignore: '**/*.scss'},
+      rules: {
+        'no-ids': 1,
+        'no-mergeable-selectors': 0
+      },
+      configFile: 'config/other/.sass-lint.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 //iconfont task
