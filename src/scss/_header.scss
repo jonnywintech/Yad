@@ -70,6 +70,7 @@ body{
 .header__menu--active{
     @include breakpoint(touch){
             transform: translateX(0);
+            pointer-events: none;
     }
 }
 
