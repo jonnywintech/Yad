@@ -1,13 +1,21 @@
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
+const webp = require('gulp-webp');
 const consolidate = require("gulp-consolidate");
 const iconfont = require("gulp-iconfont");
 const postcss = require("gulp-postcss");
 const sassLint = require('gulp-sass-lint');
 const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync").create();
-const webp = require('gulp-webp');
 var runTimestamp = Math.round(Date.now() / 1000);
+
+//webp
+// gulp.task('webp', () =>
+//     gulp.src('src/image.jpg')
+//         .pipe(webp())
+//         .pipe(gulp.dest('dist/images'))
+// );
+
 
 //scss to css task
 gulp.task("scss", () => {
@@ -88,6 +96,7 @@ gulp.task("copy-fonts", () => {
 gulp.task("copy-assets", () => {
   return gulp
     .src("src/images/*.{png,svg,jpg,jpeg}")
+    .pipe(gulp.dest("dist/images"))
     .pipe(webp())
     .pipe(gulp.dest("dist/images"));
 });
