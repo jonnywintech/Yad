@@ -63,9 +63,9 @@
     }
 }
 
-body{
-    overflow-x: hidden;
-}
+// body{
+//     overflow-x: hidden;
+// }
 
 .header__menu--active{
     @include breakpoint(touch){

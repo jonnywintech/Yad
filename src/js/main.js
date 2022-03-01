@@ -46,9 +46,11 @@ hamburger.addEventListener("click",()=>{
     moblieMenu.classList.toggle("header__menu--active");
   if(hamburger.classList.contains("icon-hamburger")){
       hamburgerOpen();
+      document.body.style.overflowY = "hidden";
       return;
   }else{
       hamburgerClose();
+      document.body.style.overflowY = "unset";
     return;
   }
 })
